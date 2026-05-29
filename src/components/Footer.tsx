@@ -5,6 +5,7 @@
 
 import { PageId } from '../types';
 import LucideIcon from './LucideIcon';
+import logo from '../../assets/logo.png';
 
 interface FooterProps {
   setCurrentPage: (page: PageId) => void;
@@ -23,10 +24,12 @@ export default function Footer({ setCurrentPage }: FooterProps) {
         {/* Brand & Corporate Overview */}
         <div id="footer-logo-block">
           <div className="flex items-center cursor-pointer mb-5" onClick={() => handleNav('home')}>
-            <div className="p-2 bg-gradient-to-br from-[#00b4d8] to-[#0077b6] rounded-md mr-3">
-              <LucideIcon name="Layers" className="text-white" size={18} />
-            </div>
-            <span className="text-md font-bold tracking-tight text-white font-heading">
+            <img
+                src={logo}
+                alt="Softview Technologies"
+                className="h-11 w-auto object-contain transition-all duration-300 group-hover:scale-[1.02]"
+              />
+            <span className="text-md font-bold tracking-tight text-white font-heading ml-1">
               SOFTVIEW <span className="text-[#00b4d8] font-light">TECHNOLOGIES</span>
             </span>
           </div>

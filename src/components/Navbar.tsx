@@ -7,6 +7,7 @@ import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { PageId } from '../types';
 import { motion, AnimatePresence } from 'motion/react';
+import logo from '../../assets/logo.png';
 import { 
   Building, 
   ChevronDown, 
@@ -260,12 +261,15 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
               onClick={() => handleNav('home')}
               id="top-logo-trigger"
             >
-              <div className="p-2 bg-gradient-to-br from-[#00b4d8] to-[#0077b6] rounded-xl shadow-lg shadow-cyan-500/10 mr-3.5 transition-transform duration-300 group-hover:scale-105">
-                <Layers className="text-white" size={22} id="primary-logo-icon" />
-              </div>
+              <img
+    src={logo}
+    alt="Softview Technologies"
+    className="h-11 w-auto object-contain transition-all duration-300 group-hover:scale-[1.02]"
+  />
               <div className="text-left">
-                <span className="text-lg font-black tracking-wider text-white font-heading leading-none block">
-                  SOFTVIEW <span className="text-[#00b4d8] font-medium text-xs tracking-widest ml-1">TECHNOLOGIES</span>
+                <span className="text-lg font-black tracking-wider text-white font-heading leading-none block ml-1">
+                  SOFTVIEW <span className="text-[#00b4d8] font-medium text-xs tracking-widest">TECHNOLOGIES</span>
+                  <span className="text-slate-500 text-[9px] block font-mono mt-0.5">Industry 4.0</span>
                 </span>
               </div>
             </div>
@@ -650,11 +654,14 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
         <div className="lg:hidden flex items-center justify-between h-16 px-4 sm:px-6 max-w-7xl mx-auto w-full">
           {/* Logo Left */}
           <div className="flex items-center cursor-pointer" onClick={() => handleNav('home')} id="mobile-logo-trigger">
-            <div className="p-1.5 bg-gradient-to-br from-[#00b4d8] to-[#0077b6] rounded-lg shadow mr-2">
-              <Layers className="text-white" size={16} />
-            </div>
-            <span className="text-sm font-black tracking-wider text-white font-heading">
-              SOFTVIEW <span className="text-[#00b4d8] font-medium text-xs tracking-widest ml-1">TECHNOLOGIES</span>
+            <img
+    src={logo}
+    alt="Softview Technologies"
+    className="h-10 w-auto object-contain transition-all duration-300 group-hover:scale-[1.02]"
+  />
+            <span className="text-sm font-black tracking-wider text-white font-heading ml-1">
+              SOFTVIEW <span className="text-[#00b4d8] font-medium text-xs tracking-widest">TECHNOLOGIES</span>
+              <span className="text-slate-500 text-[9px] block font-mono mt-0.5">Industry 4.0</span>
             </span>
           </div>
 
@@ -702,11 +709,13 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
                 className="flex items-center cursor-pointer" 
                 onClick={() => { setIsOpen(false); handleNav('home'); }}
               >
-                <div className="p-2 bg-gradient-to-br from-[#00b4d8] to-[#0077b6] rounded-lg mr-2">
-                  <Layers className="text-white" size={16} />
-                </div>
-                <span className="text-md font-black tracking-wider text-white font-heading uppercase">
-                  SOFTVIEW <span className="text-[#00b4d8] font-medium text-xs tracking-widest ml-1">TECHNOLOGIES</span> <span className="text-slate-500 text-[9px] block font-mono mt-0.5">Industry 4.0</span>
+                <img
+    src={logo}
+    alt="Softview Technologies"
+    className="h-10 w-auto object-contain transition-all duration-300 group-hover:scale-[1.02]"
+  />
+                <span className="text-md font-black tracking-wider text-white font-heading uppercase ml-1">
+                  SOFTVIEW <span className="text-[#00b4d8] font-medium text-xs tracking-widest">TECHNOLOGIES</span> <span className="text-slate-500 text-[9px] block font-mono mt-0.5">Industry 4.0</span>
                 </span>
               </div>
               <button
