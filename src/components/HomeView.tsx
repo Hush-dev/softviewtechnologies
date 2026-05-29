@@ -62,13 +62,12 @@ export default function HomeView({ setCurrentPage, telemetry, setTelemetry }: Ho
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <button 
                 onClick={() => {
-                  setCurrentPage('lead-hub');
+                  setCurrentPage('contact');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
                 className="px-8 py-4.5 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-black rounded-lg shadow-lg shadow-orange-500/25 flex items-center justify-center gap-3 transition-all hover:scale-[1.03] text-xs uppercase tracking-widest"
               >
-                <LucideIcon name="Sparkles" size={16} />
-                AI Plant Architecture Configurator
+                Book A Consultation
               </button>
               <button 
                 onClick={() => {
